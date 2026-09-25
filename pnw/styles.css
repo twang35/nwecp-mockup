@@ -146,7 +146,9 @@ section:not(.hero) > *, .brain__inner, .foot__inner { max-width: var(--max); mar
 .dock {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: grid; grid-template-columns: 1fr 2fr; gap: 10px;
   padding: 10px var(--pad) calc(10px + env(safe-area-inset-bottom)); background: rgba(251,246,236,.94); border-top: 1px solid var(--rule); backdrop-filter: blur(8px);
+  transform: translateY(100%); transition: transform .25s ease;
 }
+.dock.is-visible { transform: none; }
 
 /* larger screens */
 @media (min-width: 720px) {
